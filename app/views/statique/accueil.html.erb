@@ -1,0 +1,17 @@
+<h1 class="main-title"> Bienvenue à toi <i class="em em-sleuth_or_spy"></i></h1>
+
+
+<%Gossip.all.each do |gossip|%>
+<div class="card">
+ <div class="card-body">
+ 	<h1><%= gossip.id%></h1>
+   <p>L'auteur est <%= gossip.author%><br></p>
+   <p><%= gossip.content%></p>
+ </div>
+</div>
+<% end %>
+
+
+
+
+

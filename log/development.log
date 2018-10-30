@@ -1,0 +1,2202 @@
+  [1m[35m (611.1ms)[0m  [1m[35mCREATE DATABASE "TheGossipProject_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (485.5ms)[0m  [1m[35mCREATE DATABASE "TheGossipProject_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5653744109500723215)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGossips (20181029150348)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (57.2ms)[0m  [1m[35mCREATE TABLE "gossips" ("id" bigserial primary key, "author" character varying, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181029150348_create_gossips.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181029150348"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (41.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-29 15:06:56.091735"], ["updated_at", "2018-10-29 15:06:56.091735"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5653744109500723215)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.9ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Jamaal"], ["content", "Sed nesciunt et."], ["created_at", "2018-10-29 15:07:04.988209"], ["updated_at", "2018-10-29 15:07:04.988209"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Cleotilde"], ["content", "Accusamus aut iure."], ["created_at", "2018-10-29 15:07:05.033082"], ["updated_at", "2018-10-29 15:07:05.033082"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Morgan"], ["content", "Assumenda nesciunt rerum."], ["created_at", "2018-10-29 15:07:05.038337"], ["updated_at", "2018-10-29 15:07:05.038337"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Shakia"], ["content", "Voluptatum quis rerum."], ["created_at", "2018-10-29 15:07:05.043535"], ["updated_at", "2018-10-29 15:07:05.043535"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Elaina"], ["content", "Qui est laudantium."], ["created_at", "2018-10-29 15:07:05.048928"], ["updated_at", "2018-10-29 15:07:05.048928"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Agustin"], ["content", "Doloribus iste et."], ["created_at", "2018-10-29 15:07:05.055039"], ["updated_at", "2018-10-29 15:07:05.055039"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Randell"], ["content", "Perferendis saepe facilis."], ["created_at", "2018-10-29 15:07:05.060424"], ["updated_at", "2018-10-29 15:07:05.060424"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.5ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Ike"], ["content", "Vel tempore quasi."], ["created_at", "2018-10-29 15:07:05.065869"], ["updated_at", "2018-10-29 15:07:05.065869"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Elias"], ["content", "Voluptatum similique dolorem."], ["created_at", "2018-10-29 15:07:05.071456"], ["updated_at", "2018-10-29 15:07:05.071456"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO "gossips" ("author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author", "Alton"], ["content", "Odio ad nisi."], ["created_at", "2018-10-29 15:07:05.077167"], ["updated_at", "2018-10-29 15:07:05.077167"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:11:01 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mathieu/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/rack-2.0.5/lib/rack/method_override.rb:22
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Author):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <%= for i in Author.all
+    4: puts i.author
+    5: puts i.content
+    6: end %>
+  
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272666592800'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:11:25 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (42.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 665ms (Views: 606.2ms | ActiveRecord: 55.5ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-29 16:11:28 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:11:29 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:11:30 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:11:36 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-29 16:11:37 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:11:38 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:22 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:23 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:28 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:31 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-29 16:12:31 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-29 16:12:32 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-29 16:12:33 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 82ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:33 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-29 16:12:35 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:12:39 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:13:34 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:14:08 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:14:23 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fd34273dc60>):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <%= for gossip in Gossip
+    4: 
+    5: end %>
+  
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272698037560'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:14:39 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:15:35 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:3: syntax error, unexpected ')', expecting keyword_do_cond or ';' or '\n'
+...nd=( for gossip in Gossip.all );@output_buffer.safe_append='
+...                              ^
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:5: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );
+...                            ^~~
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/statique/accueil.html.erb:3: syntax error, unexpected ')', expecting keyword_do_cond or ';' or '\n'
+app/views/statique/accueil.html.erb:5: syntax error, unexpected keyword_end
+app/views/statique/accueil.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/statique/accueil.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:23:12 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:3: syntax error, unexpected ')', expecting keyword_do_cond or ';' or '\n'
+...nd=( for gossip in Gossip.all );@output_buffer.safe_append='
+...                              ^
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:5: syntax error, unexpected keyword_end
+...eze;@output_buffer.append=( end );
+...                            ^~~
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/mathieu/Desktop/TheGossipProject/app/views/statique/accueil.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/statique/accueil.html.erb:3: syntax error, unexpected ')', expecting keyword_do_cond or ';' or '\n'
+app/views/statique/accueil.html.erb:5: syntax error, unexpected keyword_end
+app/views/statique/accueil.html.erb:7: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/statique/accueil.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:23:33 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:24:17 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:25:45 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (6.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 90ms (Views: 77.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:25:55 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:26:03 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:26:23 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fd34273dc60>):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <%= for gossip in Gossip
+    4: gossip.author 
+    5: end
+    6: %>
+  
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272697114220'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:26:42 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fd34273dc60>):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <%= for gossip in Gossip
+    4: gossip.author 
+    5: end
+    6: %>
+  
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272708821860'
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:26:50 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:50:15 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 79ms (Views: 73.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:50:35 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:50:46 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:50:59 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:52:53 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:53:57 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:54:01 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 16:54:13 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:35:00 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:35:21 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `size' for #<Gossip:0x00007fd346618098>):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <% for gossip in Gossip.all %>
+    4: <%=gossip.size%> 
+    5: <%=gossip.content%> 
+    6: <% end %>
+  
+app/views/statique/accueil.html.erb:4:in `block in _app_views_statique_accueil_html_erb___2744031635085983000_70272707906880'
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272707906880'
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:38:44 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:38:57 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  Rendered statique/accueil.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fd34273dc60>):
+    1: <h1> Bienvenue à toi </h1>
+    2: 
+    3: <%Gossip.each do |gossip|%>
+    4: <%=gossip.content%>
+    5: <% end %>
+  
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272708859300'
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:39:02 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:44:25 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:44:40 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:44:48 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:47:09 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 17:47:25 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:00:16 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:3
+  Rendered statique/accueil.html.erb within layouts/application (285.7ms)
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x00007fd342a65c58>:0x00007fd347ad8758>):
+    2: 
+    3:  <% Gossip.all.each_with_index do |gossip, index| %>                    
+    4:     <tr>
+    5:       <td><%= name %><td>
+    6:       <td><%= gossip.author[index] %></td>
+    7:       <td><%= gossip.content[index] %></td>
+    8:     </tr>
+  
+app/views/statique/accueil.html.erb:5:in `block in _app_views_statique_accueil_html_erb___2744031635085983000_70272708692040'
+app/views/statique/accueil.html.erb:3:in `each_with_index'
+app/views/statique/accueil.html.erb:3:in `_app_views_statique_accueil_html_erb___2744031635085983000_70272708692040'
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:03:10 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:10:19 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:11:58 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:12:04 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:12:17 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:12:25 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:12:35 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:17:34 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 76ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:24:52 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 91ms (Views: 86.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:25:10 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:27:48 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 100ms (Views: 94.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:28:02 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:28:11 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:28:34 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:28:49 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:28:55 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:31:17 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:31:25 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:31:39 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:34:43 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:35:00 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:35:46 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:36:39 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:36:49 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:37:35 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 51ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:39:17 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:40:24 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:43:19 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:43:30 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:47:54 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:48:28 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:49:10 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:49:21 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:49:52 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 18:52:29 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 20:04:56 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (149.4ms)
+Completed 200 OK in 228ms (Views: 115.5ms | ActiveRecord: 105.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:34:59 +0100
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mathieu/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/rack-2.0.5/lib/rack/method_override.rb:22
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (41.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 399ms (Views: 338.1ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:36:12 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 48ms (Views: 36.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/pierre" for 127.0.0.1 at 2018-10-30 07:36:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/pierre"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:38:29 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mathieu/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/rack-2.0.5/lib/rack/method_override.rb:22
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 260ms (Views: 247.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/pierre" for 127.0.0.1 at 2018-10-30 07:38:35 +0100
+Processing by StatiqueController#userid as HTML
+  Parameters: {"id"=>"pierre"}
+Completed 406 Not Acceptable in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#userid is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pierre" for 127.0.0.1 at 2018-10-30 07:40:41 +0100
+Processing by StatiqueController#userid as HTML
+  Parameters: {"id"=>"pierre"}
+Completed 406 Not Acceptable in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#userid is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pierre" for 127.0.0.1 at 2018-10-30 07:42:18 +0100
+Processing by StatiqueController#userid as HTML
+  Parameters: {"id"=>"pierre"}
+Completed 406 Not Acceptable in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#userid is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pierre" for 127.0.0.1 at 2018-10-30 07:43:36 +0100
+Processing by StatiqueController#méthode as HTML
+  Parameters: {"id"=>"pierre"}
+Completed 406 Not Acceptable in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#méthode is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:44:49 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 41ms (Views: 29.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:44:56 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team/id" for 127.0.0.1 at 2018-10-30 07:45:01 +0100
+  
+AbstractController::ActionNotFound (The action 'méthode' could not be found for StatiqueController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/team/id" for 127.0.0.1 at 2018-10-30 07:45:23 +0100
+Processing by StatiqueController#userid as HTML
+  Parameters: {"id"=>"id"}
+Completed 406 Not Acceptable in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#userid is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/team/id" for 127.0.0.1 at 2018-10-30 07:48:07 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mathieu/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/rack-2.0.5/lib/rack/method_override.rb:22
+Processing by StatiqueController#userid as HTML
+  Parameters: {"id"=>"id"}
+Completed 406 Not Acceptable in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StatiqueController#userid is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:48:30 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 219ms (Views: 205.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:49:27 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:49:51 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:50:05 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:50:16 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:50:23 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 07:50:36 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:50:45 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 26.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:50:53 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:51:07 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:51:17 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:51:23 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:51:45 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 37.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:52:03 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:52:56 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:54:45 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:55:42 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:56:58 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:57:14 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:57:38 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:57:42 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:58:03 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:58:10 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:58:40 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:58:57 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:59:11 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:59:11 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.1ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 07:59:12 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:01:56 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:01:59 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:02:01 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:02:32 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:02:57 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:03:16 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:03:19 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:03:20 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:03:24 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:03:33 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:03:35 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:03:42 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:03:43 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:04:22 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:04:30 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:04:41 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:04:48 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:04:50 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:04:59 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:05:03 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.9ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:06:43 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:07:40 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.2ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 33.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:07:52 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 29.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:08:12 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:08:30 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:08:37 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:08:49 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.6ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 33.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:09:53 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (2.0ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:12:04 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:12:38 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:12:52 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:12:56 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:13:42 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:14:05 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:15:00 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:15:41 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.3ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:15:47 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (1.5ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:4
+  Rendered statique/accueil.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 31.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 08:16:34 +0100
+Processing by StatiqueController#accueil as HTML
+  Rendering statique/accueil.html.erb within layouts/application
+  [1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT "gossips".* FROM "gossips"[0m
+  ↳ app/views/statique/accueil.html.erb:5
+  Rendered statique/accueil.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:16:52 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:17:42 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:18:07 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:18:42 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:18:48 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:19:32 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:19:49 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2018-10-30 08:20:45 +0100
+Processing by StatiqueController#contact as HTML
+  Rendering statique/contact.html.erb within layouts/application
+  Rendered statique/contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:20:53 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:21:25 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:21:53 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/team" for 127.0.0.1 at 2018-10-30 08:22:58 +0100
+Processing by StatiqueController#team as HTML
+  Rendering statique/team.html.erb within layouts/application
+  Rendered statique/team.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
