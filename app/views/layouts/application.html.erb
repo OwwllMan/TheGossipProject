@@ -16,18 +16,16 @@
   </head>
   <div class="header">
     <div class="header-container">
-        <h1 class="header-title"><%= link_to"TheGossipProject",home_path%><i class="em em-kiss"></i></h1>
+        <h1 class="header-title"><%= link_to"TheGossipProject",home_path%></h1>
         <div class="header-link">
-          <a  class="header-link" href="#"><%= link_to"Home",home_path%><i class="fas fa-home"></i></a>
-          <a  class="header-link" href="#"><%= link_to"Contact",contact_path%><i class="fas fa-phone"></i></a>
-          <a  class="header-link" href="#"><%= link_to"Team",team_path%><i class="fas fa-users"></i></a>
+          <a  class="header-link" href="#"><%= link_to"Home",home_path%></a>
+          <a  class="header-link" href="#"><%= link_to"Index des Gossips",index_path%></a>
+          <a  class="header-link" href="#"><%= link_to"Nouveau Gossip",new_gossip_path%></a>
         </div>
     </div>
   </div>
   <body>
-    <div class="container">
       <%= yield %>
-    </div>
   </body>
   <div class="footer">
     <div class="footer-container">

@@ -1,15 +1,16 @@
-<h1 class="main-title"> Bienvenue à toi <i class="em em-blush"></i></h1>
+<div class="body-main">
+	<div class="container">
 
 
-<%Gossip.all.each do |gossip|%>
-<div class="card">
- <div class="card-body">
- 	<h4>Potin n°<%= gossip.id%></h4>
-   <p>L'auteur est <strong><%= gossip.author%></strong><br></p>
-   <p><%= gossip.content%></p>
- </div>
+	</div>
 </div>
-<% end %>
+<div class=body-second>
+	<div class="container">
+	  <h1 class="main-title"> Bienvenue à toi </h1>
+	<p>
+  	  <a href= "<%= new_gossip_path %>" class="btn btn-success">Créer un Gossip <i class="fas fa-comments"></i></a>
+	</p>
+</div>
 
 
 
